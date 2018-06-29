@@ -22,7 +22,7 @@ module Api
             }
           else
             self.result = {
-              "response" => { errors: {} },
+              "response" => { errors: form.errors.messages },
               "status" => :unprocessable_entity
             }
           end

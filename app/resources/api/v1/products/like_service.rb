@@ -16,7 +16,7 @@ module Api
             }
           else
             self.result = {
-              "response" => { errors: {} },
+              "response" => { errors: { user_id: ["User already did it"] } },
               "status" => :unprocessable_entity
             }
           end
