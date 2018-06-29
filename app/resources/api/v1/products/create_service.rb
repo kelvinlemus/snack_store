@@ -4,9 +4,9 @@ module Api
       class CreateService < Base::Service
         def process
           model = Product.new
-          form = CreateForm.new(model, params[:data])
+          form = CreateForm.new(model)
 
-          if form.save
+          if form.validate(params[:data]) && form.save
             self.result = {
               "response" => {
                 data: serialize_model(form.model, serializer: ProductSerializer)

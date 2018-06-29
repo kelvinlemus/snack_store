@@ -9,6 +9,7 @@ module Api
         property :stock_quantity
 
         validates :name, :sale_price, :stock_quantity, presence: true
+        validates_uniqueness_of :code
       end
     end
   end

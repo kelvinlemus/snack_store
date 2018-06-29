@@ -9,9 +9,9 @@ module Api
       class UpdatePriceService < Base::Service
         def process
           model = Product.find_by_id(params[:id])
-          form = Form.new(model, params[:data])
+          form = Form.new(model)
 
-          if form.save
+          if form.validate(params[:data]) && form.save
             create_price_changelog_for(form.model)
 
             self.result = {
