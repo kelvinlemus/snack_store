@@ -1,24 +1,14 @@
-# README
+# Snack Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installing
+```
+bundle install
+create database.yml
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Limitations
+- Can't upload images
+- There is no handling of roles (user and admin)
